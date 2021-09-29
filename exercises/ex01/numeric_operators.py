@@ -1,8 +1,8 @@
 """This is the numeric operator assignment."""
-__author__ = 730407726
+__author__ = "730407726"
 
-leftside: int = 7
-rightside: int = 5
+leftside: int = int(input("Enter a number:"))
+rightside: int = int(input("Enter another number:"))
 
 
 print(leftside ** rightside)

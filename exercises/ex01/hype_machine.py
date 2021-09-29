@@ -1,5 +1,5 @@
 """This is the hype Machine Exercise."""
-__author__ = 730407726
+__author__ = "730407726"
 
 # TODO: Initialize __author__ variable here
 name: str = input("What is your name? ")
