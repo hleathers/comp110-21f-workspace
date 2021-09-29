@@ -11,6 +11,7 @@ player: str
 
 
 def main() -> None:
+    """Main function to run program."""
     global points
     global player
     greet()
@@ -25,16 +26,19 @@ def main() -> None:
 
 
 def complete() -> None:
+    """Function to end game."""
     print("Congratulations your score is", points, player)
 
 
 def greet() -> None:
+    """Function to greet player."""
     global player
     player = input("What's your name?")
     print("Welcome to the Guess That Number game!Lets play a number game where you guess the number between 1 and 200", player)
 
 
 def guess():
+    """Function to guess a number."""
     value = random.randint(1, 200)
     global number
     global player
@@ -55,6 +59,7 @@ def guess():
 
 
 def score() -> None:
+    """Function to calculate score."""
     view: bool = bool(input("Want to view your score? True or False:"))
     if view:
         print(points)
@@ -62,6 +67,7 @@ def score() -> None:
     
 
 def play() -> None:
+    """Function to ask user for input."""
     global points
     global player
     total: bool = bool(input("Want to end the game? Enter True or False"))
