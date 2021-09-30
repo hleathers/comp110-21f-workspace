@@ -2,6 +2,7 @@
 
 __author__ = "730407726"
 
+
 import random
 
 number: int = int(input("Guess a number:"))
