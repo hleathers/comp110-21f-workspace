@@ -5,11 +5,6 @@ __author__ = "730407726"
 
 import random
 
-number: int = int(input("Guess a number:"))
-points: int = 0
-named_constant: str = '\U0001F920'
-player: str
-
 
 def main() -> None:
     """Main function to run program."""
@@ -24,6 +19,12 @@ def main() -> None:
         if finish:
             guess()
             score()
+
+
+number: int = int(input("Guess a number:"))
+points: int = 0
+named_constant: str = '\U0001F920'
+player: str
 
 
 def complete() -> None:
