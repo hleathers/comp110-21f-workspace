@@ -5,6 +5,11 @@ __author__ = "730407726"
 
 import random
 
+number: int = int(input("Guess a number:"))
+points: int = 0
+named_constant: str = '\U0001F920'
+player: str
+
 
 def main() -> None:
     """Main function to run program."""
@@ -21,12 +26,6 @@ def main() -> None:
             score()
 
 
-number: int = int(input("Guess a number:"))
-points: int = 0
-named_constant: str = '\U0001F920'
-player: str
-
-
 def complete() -> None:
     """Function to end game."""
     print("Congratulations your score is", points, player)
@@ -39,7 +38,7 @@ def greet() -> None:
     print("Welcome to the Guess That Number game!Lets play a number game where you guess the number between 1 and 200", player)
 
 
-def guess():
+def guess() -> None:
     """Function to guess a number."""
     value = random.randint(1, 200)
     global number
