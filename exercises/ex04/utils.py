@@ -5,6 +5,11 @@ __author__ = "730407726"
 
 # TODO: Implement your functions here.
 
+def main() -> None:
+    all([1], 2)
+    is_equal([1], [0])
+    maximum()
+
 
 def all(xs: list[int], num: int) -> bool:
     """Duplicate a list value."""
@@ -17,7 +22,7 @@ def all(xs: list[int], num: int) -> bool:
 
 
 def is_equal(min: list[int], maxi: list[int]) -> bool:
-    """Construct list of oddws, inclusive."""
+    """Construct equal."""
     equal: int = 0
     while equal != min:
         if min[equal] < len(maxi):
@@ -27,7 +32,7 @@ def is_equal(min: list[int], maxi: list[int]) -> bool:
 
 
 def maximum(large: list[int]) -> int:
-    """Construct list of oddws, inclusive."""
+    """Construct maximum"""
     equals: int = 0
     while equals != maximum:
         if large[equals] < 0:
