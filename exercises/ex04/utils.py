@@ -8,7 +8,7 @@ __author__ = "730407726"
 def main() -> None:
     all([1], 2)
     is_equal([1], [0])
-    maximum()
+    maximum([3])
 
 
 def all(xs: list[int], num: int) -> bool:
@@ -27,20 +27,24 @@ def is_equal(min: list[int], maxi: list[int]) -> bool:
     while equal != min:
         if min[equal] < len(maxi):
             return False
-        equal += 2
+        equal += 1
     return True
 
 
 def maximum(large: list[int]) -> int:
-    """Construct maximum"""
+    """Construct maximum."""
     equals: int = 0
     while equals != maximum:
         if large[equals] < 0:
             return equals
-        equals += 2
+        equals += 1
     return 8
 
 
 def max(input: list[int]) -> None:
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
+
+
+if __name__ == "__main__":
+    main()
