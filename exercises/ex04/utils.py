@@ -14,6 +14,8 @@ def main() -> None:
 def all(xs: list[int], num: int) -> bool:
     """Duplicate a list value."""
     i: int = 0
+    if len(xs) == 0:
+        return False
     while i < len(xs):
         if xs[i] != num:    
             return False
@@ -24,11 +26,13 @@ def all(xs: list[int], num: int) -> bool:
 def is_equal(min: list[int], maxi: list[int]) -> bool:
     """Construct equal."""
     equal: int = 0
+    if len(maxi) == 0:
+        return False
     while equal != min:
         if min[equal] < len(maxi):
-            return False
+            return True
         equal += 1
-    return True
+    return False
 
 
 def maximum(large: list[int]) -> int:
@@ -42,6 +46,7 @@ def maximum(large: list[int]) -> int:
 
 
 def max(input: list[int]) -> None:
+    """Call to function."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
 
