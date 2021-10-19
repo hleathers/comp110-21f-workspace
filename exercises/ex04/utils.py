@@ -6,6 +6,7 @@ __author__ = "730407726"
 # TODO: Implement your functions here.
 
 def main() -> None:
+    """Start."""
     all([1], 2)
     is_equal([1], [0])
     max([1, 2, 3, 4, 5])
@@ -41,10 +42,10 @@ def is_equal(min: list[int], maxi: list[int]) -> bool:
 
 def max(large: list[int]) -> int:
     """Construct max."""
-    max: int = 0
     i: int = 0
     if len(large) == 0:
         raise ValueError("max() arg is an empty List")
+    max: int = large[0]
     while len(large) > i:
         if max < large[i]:
             max = large[i]
