@@ -25,11 +25,13 @@ def all(xs: list[int], num: int) -> bool:
 
 def is_equal(min: list[int], maxi: list[int]) -> bool:
     """Construct equal."""
+    if len(min) != len(maxi):
+        return False
     equal: int = 0
     if min == maxi:
         return True
-    while min != maxi:
-        if min[equal] < len(maxi):
+    while equal <= len(maxi):
+        if min[equal] != maxi[equal]:
             return False
         equal += 1
         while len(min) == 0:
