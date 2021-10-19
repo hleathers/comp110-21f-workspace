@@ -37,14 +37,17 @@ def is_equal(min: list[int], maxi: list[int]) -> bool:
     return False
 
 
-def max(large: list[int]) -> None:
+def max(large: list[int]) -> int:
     """Construct max."""
-    equals: int = 0
+    max: int = 0
+    i: int = 0
     if len(large) == 0:
         raise ValueError("max() arg is an empty List")
-    while large != 0:
-        if large[equals] < 0:
-            return 
+    while len(large) > i:
+        if max < large[i]:
+            max = large[i]
+        i += 1
+    return max
 
 
 if __name__ == "__main__":
