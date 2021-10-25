@@ -5,7 +5,7 @@ __author__ = "730407726"
 
 import random
 
-number: int = int(input("Guess a number:"))
+number: int 
 points: int = 0
 named_constant: str = '\U0001F920'
 player: str
@@ -13,6 +13,8 @@ player: str
 
 def main() -> None:
     """Main function to run program."""
+    global number 
+    number = int(input("Guess a number:"))
     global points
     global player
     greet()
