@@ -7,14 +7,11 @@ __author__ = "730407726"
 
 def only_evens(xs: list[int]) -> list[int]:
     """Duplicate a list value."""
-    i: int = 0
-    if xs[i] / 2:
-        return xs
-    while i < len(xs):
-        if xs[i] != 0:    
-            return []
-        i += 1
-    return xs
+    gh: int = 0
+    for gh in xs:
+        if gh / 2 == 0:
+            return xs
+    return []
 
 
 def sub(a_list: list[int], h: int) -> list[int]:
@@ -22,12 +19,11 @@ def sub(a_list: list[int], h: int) -> list[int]:
     i: int = 0
     if len(a_list) == 0:
         return a_list
-    max: int = a_list[0]
-    while len(a_list) > max:
+    while len(a_list) > i:
         if a_list[i] != 0:    
             return [h]
         i += 1
-    return [max]
+    return []
 
 
 def concat(y: list[int], p: list[int]) -> list[int]:
@@ -39,4 +35,4 @@ def concat(y: list[int], p: list[int]) -> list[int]:
         if y[i] != 0:    
             return p
         i += 1
-    return p
+    return []
