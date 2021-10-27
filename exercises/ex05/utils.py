@@ -33,8 +33,8 @@ def sub(a_list: list[int], start: int, end: int) -> list[int]:
 def concat(y: list[int], p: list[int]) -> list[int]:
     """Duplicate a list value."""
     i: int = 0
-    both: list[int] = y and p
+    both: list[int] = y
     while i < len(p):
-        if y[i] != 0:    
-            i += 1
+        both.append(p[i])
+        i += 1
     return both
