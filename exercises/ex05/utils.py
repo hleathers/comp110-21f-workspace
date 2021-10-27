@@ -16,24 +16,25 @@ def only_evens(xs: list[int]) -> list[int]:
 
 def sub(a_list: list[int], start: int, end: int) -> list[int]:
     """Duplicate a list value."""
-    i: int = start
     if start < 0:
-        
-    if len(a_list) == 0:
-        return a_list
+        start = 0
+    if end > len(a_list):
+        end = len(a_list)
+    i: int = start
+    if len(a_list) == 0 or start > len(a_list) or end <= 0:
+        return []
     new: list[int] = []
     while i < end:   
         new.append(a_list[i])
+        i += 1
     return new
 
 
 def concat(y: list[int], p: list[int]) -> list[int]:
     """Duplicate a list value."""
     i: int = 0
-    if len(y) == 0:
-        return y
+    both: list[int] = y and p
     while i < len(p):
         if y[i] != 0:    
-            return p
-        i += 1
-    return []
+            i += 1
+    return both
