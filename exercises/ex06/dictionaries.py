@@ -1,6 +1,6 @@
 """Practice with dictionaries."""
 
-__author__ = "123456789"
+__author__ = "730407729"
 
 # Define your functions below
 
@@ -35,4 +35,9 @@ def favorite_color(color: dict[str, str]) -> str:
 def count(another: list[str]) -> dict[str, int]:
     """Count function."""
     store: dict[str, int] = {}
-    
+    for value in another:
+        if value in store:
+            store[value] += 1
+        else:
+            store[value] = 1
+    return store

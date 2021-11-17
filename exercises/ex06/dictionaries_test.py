@@ -3,7 +3,7 @@
 # TODO: Uncomment the below line when ready to write unit tests
 from exercises.ex06.dictionaries import invert, favorite_color, count
 
-__author__ = "123456789"
+__author__ = "730407726"
 
 
 def test_invert_random() -> None:
@@ -40,3 +40,21 @@ def test_favorite_color_three() -> None:
     """Test for favorite three."""
     color: dict[str, str] = {"Matt": "Orange", "Aubry": "Green", "Pat": "Orange"}
     assert favorite_color(color) == {"Orange"}
+
+
+def test_count_one() -> None:
+    """Test for favorite one."""
+    another: list[str] = ["Blue", "Red", "Red"]
+    assert count(another) == {"Blue": 1, "Red": 2}
+
+
+def test_count_two() -> None:
+    """Test for favorite two."""
+    another: list[str] = ["Matt", "Vera", "Matt"]
+    assert count(another) == {"Matt": 2, "Vera": 1}
+
+
+def test_count_three() -> None:
+    """Test for favorite three."""
+    another: list[str] = ["Pink", "Pink", "Pink"]
+    assert count(another) == {"Pink": 3}
